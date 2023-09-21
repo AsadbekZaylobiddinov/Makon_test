@@ -1,0 +1,10 @@
+{
+"compilerOptions": {
+      "allowJs": true
+    },
+"schemas": {
+    "package.json": {
+      "url": "./package-schema.json"
+    }
+  }
+}

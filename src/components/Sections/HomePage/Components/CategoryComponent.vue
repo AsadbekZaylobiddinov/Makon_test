@@ -34,6 +34,7 @@ function toProductCatalog(){
 text-align: center;
 width: 200px;
 height: 60px;
+/* padding: 10px; */
 border: 1px solid #FFFFFF;
 border-radius: 20px;
 }
@@ -41,9 +42,22 @@ border-radius: 20px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
-font-size: 26px;
+font-size: 1.6rem;
 line-height: 31px;
 color: #FFFFFF;
 
+}
+@media (max-width: 1000px){
+    .category__main{
+        width: 170px;
+        height: 60px;
+    }  
+}
+
+@media (max-width: 410px){
+    .category__main{
+        width: 120px;
+        height: 60px;
+    }  
 }
 </style>

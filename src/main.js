@@ -4,7 +4,7 @@ import App from './App.vue'
 import { createPinia } from 'pinia';
 import  router  from './routing/router'
 
-axios.defaults.baseURL = "http://asadbek1502-001-site1.atempurl.com/api";
+axios.defaults.baseURL = "https://asadbek1502-001-site1.atempurl.com/api";
 
 var store = createPinia()
 

@@ -52,7 +52,7 @@ function checkFavouriteStatus(e){
 .product__title__text{
 color: #2f2e2e;
 font-family: Inter;
-font-size: 20px;
+font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -65,13 +65,13 @@ line-height: normal;
     ;
     margin-top: 40px;
     padding-left: 20px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-bottom: 20px;
 }
 .product__address__text p{
 color: #4E4747;
 font-family: Inter;
-font-size: 18px;
+font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -83,7 +83,7 @@ line-height: normal;
 color: #000;
 margin-top: 20px;
 font-family: Inter;
-font-size: 18px;
+font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -91,13 +91,17 @@ line-height: normal;
 .add_to_favourite{
     grid-area: favourite;
 }
-.add_to_favourite_btn{
-    margin-left: 20px;
-    border: none;
-    background: none; 
-}
-.add_to_favourite_btn img{
-    width: 35px;
-    height: 38px;
+
+@media (max-width: 600px){
+    .product__address__price__favourite{
+        margin-top: 20px;
+        padding-left: 5px;
+    }
+    .product__price *{
+        margin-top: 10px;
+    }
+    .product__title{
+        padding-left: 5px;
+    }
 }
 </style>

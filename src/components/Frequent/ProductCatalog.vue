@@ -32,4 +32,19 @@ var checkUsersProduct = computed(() => props.productType == 2 ? true : false)
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 3%;
 }
+
+@media (max-width: 1200px) {
+    .product__catalog__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3%;
+} 
+}
+@media (max-width: 700px) {
+    .product__catalog__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3%;
+} 
+}
 </style>

@@ -15,8 +15,8 @@ import RegisterButtonHome from '../../../UI/Buttons/RegisterButtonHome.vue'
     display: grid;
     grid-template-areas: 'auth register';
     grid-column-gap: 5px;
-    max-width: 400px;
-    justify-self: flex-end;
+    /* max-width: 200px; */
+    justify-self: end;
 }
 
 .auth_btn_home{

@@ -15,6 +15,8 @@ var router = useRouter()
 
 <style scoped> 
 .auth__button__home__main{
+    display: grid;
+    justify-content: end;
     cursor: pointer;
     width: 155px;
     height: 40px;
@@ -25,8 +27,17 @@ var router = useRouter()
     height: 36px;
     background-color:transparent;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
 }
-
+@media (max-width: 600px){
+    .auth__button__home{
+        width: 100px;
+    height: 36px;
+    background-color:transparent;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    }
+}
 </style>

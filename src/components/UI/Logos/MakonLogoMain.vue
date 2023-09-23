@@ -21,7 +21,7 @@
 font-family: 'Italiana', serif;
 font-style: normal;
 font-weight: 400;
-font-size: 30px;
+font-size: 2rem;
 line-height: 35px;
 
 color: #FFFFFF; 

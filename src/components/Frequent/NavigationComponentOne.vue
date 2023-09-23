@@ -44,4 +44,10 @@ import MakonLogoMain from '../UI/Logos/MakonLogoMain.vue';
     color: white;
     margin-right: 25px;
     }
+
+    @media (max-width: 1000px){
+        .nav__main{
+            display: none;
+        }
+    }
 </style>

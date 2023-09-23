@@ -18,4 +18,25 @@ img{
 .product__image__container{
     height:230px
 }
+
+@media (max-width: 900px) {
+    .product__image__container{
+    height:170px
+}}
+
+@media (max-width: 600px) {
+    .product__image__container{
+    height:160px
+}
+}
+@media (max-width: 500px) {
+    .product__image__container{
+    height:130px
+}
+}
+@media (max-width: 400px) {
+    .product__image__container{
+    height:110px
+}
+}
 </style>

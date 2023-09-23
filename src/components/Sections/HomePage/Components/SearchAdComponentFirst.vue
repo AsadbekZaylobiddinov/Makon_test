@@ -69,8 +69,6 @@ function push(){
     justify-content: center;
     grid-column-gap: 25px;
     grid-template-areas: 'inp btn';
-    margin-top: 140px;
-    width: 100%;
 }
 .search__input__main{
     width: 100%;
@@ -78,6 +76,7 @@ function push(){
 }
 .search__input{
 height: 44px;
+font-size: 1rem;
 box-sizing: border-box;
 padding-left: 10px;
 background: #FFFFFF;
@@ -105,5 +104,9 @@ border-radius: 10px;
 }
 .searchTwo{
     background-image: url('../../../Sections/ProductCatalogPage/Assets/search_button.png');
+}
+
+@media (max-width: 700px) {
+    
 }
 </style>

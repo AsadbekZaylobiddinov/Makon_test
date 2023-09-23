@@ -38,4 +38,10 @@
     color: white;
     margin-right: 25px;
     }
+
+    @media (max-width: 400px){
+        .nav__el *{
+            font-size: 0.9rem;
+        } 
+    }
 </style>

@@ -151,7 +151,7 @@ async function deleteProduct(){
     overflow: hidden;
 }
 .preview__img{
-    max-width: 30vw;
+    max-width: 25vw;
     max-height: 25vh;
     border-radius: 10px;
 }
@@ -185,6 +185,7 @@ text-overflow: ellipsis;
     display: grid;
     grid-template-areas: '1 2';
     margin-top: 20px;
+    
 }
 .buttons button{
     padding: 8px;
@@ -194,11 +195,13 @@ text-overflow: ellipsis;
 }
 .delete__from__favourites__button{
     background-color: red;
+    font-size: 1rem;
 }
 .look__product__button{
     cursor: pointer;
     background-color: #0074D9;
     margin-right: 20px;
+    font-size: 1rem;
 }
 
 </style>

@@ -3,7 +3,6 @@
         <label class="form__input__label" :for="inputPlaceholder">{{ props.label_text }}</label>
         <input v-model="data" @change="setAuthData" :name="props.name"
         :id="inputPlaceholder" class="auth_register_input"
-        :style="{width: inputWidth + 'px'}" 
         :type="type" 
         :placeholder="inputPlaceholder">
     </div>
@@ -26,7 +25,7 @@ function setAuthData(){
     }
 }
 
-var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32)
+// var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32)
 
 </script>
 
@@ -40,13 +39,14 @@ var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32)
     text-align: center;
     color: #858585;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 10px;
 }
 .auth_register_input{
+    width: 230px;
     padding: 5px;
     height: 32px;
     border-radius: 15px;
@@ -58,5 +58,18 @@ var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32)
     outline: none;
     border: 1px solid #DBDBDB;
 }
+@media (max-width: 800px){
+    .auth_register_input{
+        width: 150px;
+    }
+}
 
+@media (max-width:600px){
+    .auth_register_input{
+        width: 180px;
+    }
+    .form__input__label{
+    color: white;
+    }
+}
 </style>

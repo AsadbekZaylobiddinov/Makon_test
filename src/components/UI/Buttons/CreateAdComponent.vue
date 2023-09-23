@@ -31,4 +31,10 @@ function createAd(){
     background-color: white;
     border-radius: 10px;
 }
+
+@media (max-width: 800px){
+    .create__ad{
+        display: none;
+    }
+}
 </style>

@@ -94,14 +94,18 @@ function changeActiveElement(data){
 <style scoped>
 .product__slider__container{
     display: grid;
-    grid-template-areas: 
-    'arrowLeft sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer sliderElementsContainer arrowRight '
-    'sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator sliderIndicator'
-    ;
+    align-items: start;
+    grid-template-columns: 1fr 5fr 1fr;
     cursor: pointer;
 }
-.slider__indicator__class{
+/* .slider__indicator__class{
     justify-self: center;
     grid-area: sliderIndicator;
+} */
+
+@media (max-width: 800px){
+    .product__slider__container{
+        justify-self: center;
+    }
 }
 </style>

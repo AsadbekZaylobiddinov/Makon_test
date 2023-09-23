@@ -37,4 +37,10 @@ onMounted(async () => {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
 }
+
+@media (max-width: 800px){
+    .categories__block{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 </style>

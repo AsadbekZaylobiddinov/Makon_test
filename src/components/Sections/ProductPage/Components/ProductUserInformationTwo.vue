@@ -74,7 +74,7 @@ function toUsersProducts(){
 .user__name__text{
 color: #FFF;
 font-family: Inter;
-font-size: 22px;
+font-size: 1.4rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -88,6 +88,7 @@ margin-left: 10px;
     background-color: #ffffff;
     padding: 10px;
     width: 15vw;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 10px;
     border: none;
@@ -102,10 +103,16 @@ margin-left: 10px;
 .other__products__text{
 color: #FFF;
 font-family: Inter;
-font-size: 18px;
+font-size: 1.2rem;
 font-style: italic;
 font-weight: 100;
 line-height: normal;
 text-decoration: underline;
+}
+
+@media (max-width: 800px){
+    .user__phone__number__button{
+        width: 30vw;
+    }
 }
 </style>

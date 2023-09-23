@@ -60,7 +60,7 @@ function chooseSort(e){
 .filtr__element__text{
 color: #726868;
 font-family: Inter;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normale;
@@ -70,10 +70,17 @@ line-height: normale;
     padding-left: 10px;
     height: 30px;
 width: 16vw;
+font-size: 1rem;
 border-radius: 5px;
 border: 1px solid #DAD9D9;
 }
 .filtr__sort__text__wrapper{
     margin-bottom: 10px;
+}
+
+@media(max-width: 780px){
+    .filtr__element__input{
+        width: 25vw;
+    }
 }
 </style>

@@ -14,7 +14,7 @@
   var authStore = useAuthStore()
 
   var props = defineProps(['value'])
-  var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32) 
+  // var inputWidth = computed(() => ((window.innerWidth / 2) / 100) * 32) 
 
   async function authenticate(){
     try{
@@ -39,6 +39,7 @@ catch(e){
       text-align: center;
   }
   .submit__input{
+    width: 230px;
       padding: 5px;
       height: 32px;
       border-radius: 15px;
@@ -47,5 +48,11 @@ catch(e){
       margin-bottom: 25px;
       color: white;
       cursor: pointer;
+  }
+
+  @media (max-width: 800px){
+    .submit__input{
+      width: 150px;
+    }
   }
   </style>

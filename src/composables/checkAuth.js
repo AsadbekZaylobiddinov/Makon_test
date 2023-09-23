@@ -22,10 +22,9 @@ export function useCheckAuth() {
                 return 401;
               }
               else{
-                sessionStorage.setItem('makon__user__data',{
-                  name: token.Name,
-                  id: token.id
-                }) 
+                sessionStorage.setItem('makon__user__id',token.Id)
+                sessionStorage.setItem('makon__user__name',token.Name)
+
                 sessionStorage.setItem('makon__authentication__status__secret' , 200)
                 if(f == true){
                   return {

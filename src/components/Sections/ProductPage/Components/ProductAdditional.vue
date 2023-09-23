@@ -60,7 +60,7 @@ function splitDate(date) {
     /* font-family:cursive; */
     word-spacing: 10px;
     line-height: 20px;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 </style>

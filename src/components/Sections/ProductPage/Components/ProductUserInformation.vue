@@ -84,7 +84,8 @@ async function addToFavouriteProducts(){
 </script>
 <template>
     <div class="product__user__information__container">
-        <div class="user__information__wrapper">
+        <div class="product__user__information">
+            <div class="user__information__wrapper">
             <div class="user_information__container">
                 <p class="user_information__container__text">Foydalanuvchi ma'lumotlari</p>
             </div>
@@ -97,13 +98,14 @@ async function addToFavouriteProducts(){
             <div class="product__area__container">
                 <p class="product__area__text"><span class="area__wrapper">Rayon:</span> {{ area }} </p>
             </div>
-        </div>
-        <div class="user__number__container">
+            </div>
+            <div class="user__number__container">
             <button class="user__number" @click="setPhoneNumber">{{ phoneNumber }}</button>
-        </div>
-        <div class="add__to__favourites__container">
+            </div>
+            <div class="add__to__favourites__container">
             <button @click="addToFavouriteProducts" class="add__to__favourites" >Saralanganlarga qo'shish</button>
-        </div>
+            </div>
+        </div>     
         <div class="successfully__added" :style="{top: successTop + 'vh'}">
             <div class="successfully__added__container">
                 <p>Muvaffaqiyatli saralanganlarga qo'shildi</p>
@@ -138,11 +140,12 @@ async function addToFavouriteProducts(){
     margin-bottom: 10px;
 }
 .user_information__container__text{
-    font-size: 24px;
+    font-size: 1.5rem;
     /* font-weight: 700; */
     color: rgb(158, 153, 153);
 }
 .user__information__wrapper{
+    grid-area: info;
     display: inline-grid;
     padding: 20px;
     justify-content: center;
@@ -154,7 +157,18 @@ async function addToFavouriteProducts(){
     /* color: rgb(163, 163, 163); */
     border: rgb(221, 220, 220) solid 1px;
 }
-
+.user__number__container{
+    margin-top: 20px;
+    align-self: end;
+    grid-area: number;
+}
+.user__number{
+    font-size: 1rem;
+}
+.add__to__favourites__container{
+    grid-area: add;
+    align-self: start;
+}
 .product__user__name__container{
     display: grid;
     justify-content: start;
@@ -169,7 +183,7 @@ async function addToFavouriteProducts(){
 grid-area: text;
 align-self: center;
 font-family: Inter;
-font-size: 18px;
+font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal; 
@@ -177,7 +191,7 @@ line-height: normal;
 
 .product__city__text{
 font-family: Inter;
-font-size: 16px;
+font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -188,7 +202,7 @@ margin-bottom: 15px;
 }
 .product__area__text{
 font-family: Inter;
-font-size: 16px;
+font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -199,7 +213,7 @@ line-height: normal;
 .user__number__container, .add__to__favourites__container{
     display: grid;
     justify-content: center;
-    justify-self: start;
+    justify-self: center;
 }
 .user__number, .add__to__favourites{
     background-color: #0074D9;
@@ -215,6 +229,7 @@ line-height: normal;
     margin-top: 20px;
 }
 .add__to__favourites{
+    font-size: 1rem;
     background-color: #d97700; 
 }
 .successfully__added, .error, .not__authorized, .already__exist{
@@ -241,5 +256,33 @@ line-height: normal;
 }
 .error__container, .not__authorized__container, .already__exist__container,.error__container{
     color: red;
+}
+
+@media (max-width: 800px){
+    .product__user__information{
+        width: 95vw;
+        display: grid;
+        grid-template-areas: 
+        'info number'
+        'info add'
+        ;
+    }
+}
+
+@media (max-width: 515px){
+    .product__user__information{
+        width: 95vw;
+        display: grid;
+        grid-template-areas: 
+        'info info'
+        'number add'
+        ;
+    }
+    .user__number, .add__to__favourites{
+        width: 40vw;
+    }
+    .user__information__wrapper{
+        margin-top: 0;
+    }
 }
 </style>

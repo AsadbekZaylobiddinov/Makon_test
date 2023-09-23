@@ -70,6 +70,7 @@ function switchToSum(){
 
 <style scoped>
 .filtr__valyuta__wrapper{
+    grid-area: valyuta;
     display: inline-grid;
     align-content: start;
     grid-template-areas: 
@@ -77,15 +78,20 @@ function switchToSum(){
     'uzs uzs';
 }
 .filtr__valyuta__wrapper *{
+    font-size: 1rem;
     display: inline-block;
 }
 .filtr__valyuta__switch__wrapper{
     margin-top: 10px;
 }
+.filtr__valyuta__switch__wrapper div{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .filtr__valyuta__text{
 color: #726868;
 font-family: Inter;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normale;
@@ -119,5 +125,12 @@ margin-left: 8px;
     background-color: #fff;
     width: 3vw;
     height: 30px;
+}
+
+@media (max-width: 780px){
+    .filtr__valyuta__switch__wrapper div{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 }
 </style>

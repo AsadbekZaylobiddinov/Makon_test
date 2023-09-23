@@ -23,4 +23,10 @@
     background-color: #0074D9;
     border-radius: 15px;
 }
+
+@media (max-width: 800px){
+    .view__score{
+        display: none;
+    }
+}
 </style>

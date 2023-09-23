@@ -15,11 +15,11 @@ var props = defineProps(['activeElement'])
 
 <style scoped>
 .slider__element__container{
+    display: grid;
     margin-top: 20px;
+    justify-content: center;
 }
 .slider__element__image__container{
-    height: 60vh;
-    width: 40vw;
     border-radius: 10px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
@@ -28,8 +28,19 @@ var props = defineProps(['activeElement'])
     justify-content: center;
 }
 .slider__element__image{
-    width: 40vw;
+    max-width: 40vw;
     max-height: 60vh;
     border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    .slider__element__image__container{
+        height: 40vh;
+        width: 60vw;
+    }
+    .slider__element__image{
+        max-width: 60vw;
+        max-height: 40vh;
+    }
 }
 </style>

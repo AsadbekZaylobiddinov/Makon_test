@@ -35,9 +35,6 @@ function reloadPage(){
         </div>
         <div class="filtr__price__submit__wrapper">
             <filtr-price-component></filtr-price-component>
-            <div @click="reloadPage" class="filtr__submit__button__wrapper">
-                <button class="filtr__submit__button">Qo'llash</button>
-            </div>
         </div>
         <div class="filtr__address__category__valyuta__wrapper">
             <filtr-address-component></filtr-address-component>
@@ -45,6 +42,9 @@ function reloadPage(){
             <filtr-sort-component></filtr-sort-component>
             <filtr-valyuta-component></filtr-valyuta-component>
         </div>
+        <div @click="reloadPage" class="filtr__submit__button__wrapper">
+                <button class="filtr__submit__button">Qo'llash</button>
+            </div>
     </div>
 </template>
 
@@ -55,15 +55,15 @@ function reloadPage(){
 .filtr__text{
 color: #2E2D2D;
 font-family: Inter;
-font-size: 26px;
+font-size: 1.7rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.filtr__price__submit__wrapper{
+/* .filtr__price__submit__wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    grid-template-columns: 1fr;
+} */
 .filtr__submit__button__wrapper{
     justify-content: start;
     align-content: end;
@@ -72,7 +72,8 @@ line-height: normal;
 .filtr__submit__button{
     padding-top: 8px;
     padding-bottom: 8px;
-    width: 150px;
+    font-size: 1rem;
+    width: 15vw;
     background-color: #0074D9;
     color: white;
     border: none;
@@ -84,6 +85,21 @@ line-height: normal;
     display: grid;
     grid-template-areas: 
     'address categories valyuta sort'
+}
+
+@media (max-width: 780px){
+    .filtr__address__category__valyuta__wrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-template-areas: 
+    'sort valyuta'
+    'address categories '
+}
+
+.filtr__submit__button{
+    width: 20vw;
+}
+
 }
 
 </style>

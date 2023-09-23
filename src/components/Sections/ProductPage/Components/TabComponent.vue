@@ -75,4 +75,10 @@ function setLocation(){
     padding-right: 5vw;
     padding-top: 5vh;
 }
+
+@media (max-width: 350px){
+    .product__tab{
+        padding-left: 0;
+    }
+}
 </style>

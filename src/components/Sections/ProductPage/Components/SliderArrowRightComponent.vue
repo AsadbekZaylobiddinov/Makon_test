@@ -16,7 +16,6 @@ var emit = defineEmits('turnRightActiveElement')
 
 <style scoped>
 .slider__arrow__right__container{
-    margin-left: 30px;
     justify-self: start;
     align-self: center;
     cursor: pointer;

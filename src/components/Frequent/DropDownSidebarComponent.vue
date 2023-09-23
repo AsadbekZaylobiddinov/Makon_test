@@ -89,6 +89,17 @@ router.push('/my/favourites')
     list-style: none;
     line-height: 50px;
     color: #555454;
-    font-size: 18px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px){
+    .sidebar{
+        width: 40vw;
+    }
+}
+@media (max-width: 500px){
+    .sidebar{
+        width: 60vw;
+    }
 }
 </style>

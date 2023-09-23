@@ -47,7 +47,8 @@ function chooseSubCategory(e){
         array[index] = false
     })
 
-    const selectedCategory = e.target.value;
+    if(e.target.value != "Barcha Kategoriyalar"){
+        const selectedCategory = e.target.value;
     const currentQuery = {...route.query}; // Создаем копию текущих query параметров
     console.log(currentQuery)
     currentQuery.Category = selectedCategory; // Добавляем новый query параметр
@@ -79,6 +80,18 @@ function chooseSubCategory(e){
 
     }
     subCategoryVisible.value = 1
+    }
+    else{
+        const currentQuery = {...route.query}; // Создаем копию текущих query параметров
+    console.log(currentQuery)
+    currentQuery.Category = '';
+    router.push({ query: currentQuery });
+    }
+    
+}
+
+function changeVisibleStatus(){
+    subCategoryVisible.value = 0
 }
 
 </script>
@@ -95,14 +108,16 @@ function chooseSubCategory(e){
                 </select>
             </div>
         </div>
-        <div class="filtr__subCategory__wrapper filtr__element__wrapper">
-            <sub-categories-checkbox :checkedSubCategory="checkedSubCategories" :subCategories="visibleSubCategories" :visibleOrNot="subCategoryVisible"></sub-categories-checkbox>
-        </div>
+        
     </div>
+    <div class="filtr__subCategory__wrapper filtr__element__wrapper">
+            <sub-categories-checkbox @subcategoriesReady="changeVisibleStatus" :checkedSubCategory="checkedSubCategories" :subCategories="visibleSubCategories" :visibleOrNot="subCategoryVisible"></sub-categories-checkbox>
+        </div>
 </template>
 
 <style scoped>
 .filtr__category__wrapper{
+    grid-area: categories;
     display: grid;
     align-content: start;
     grid-template-areas: 
@@ -133,7 +148,7 @@ function chooseSubCategory(e){
 .filtr__element__text{
 color: #726868;
 font-family: Inter;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normale;
@@ -145,8 +160,19 @@ margin-left: 8px;
     padding-left: 10px;
     height: 30px;
 width: 16vw;
+font-size: 0.8rem;
 border-radius: 5px;
 border: 1px solid #DAD9D9;
+}
+
+@media(max-width: 780px){
+    .filtr__element__input{
+        width: 25vw;
+    }
+
+    .filtr__element__wrapper{
+        margin-top: 20px;
+    }
 }
 </style>
 

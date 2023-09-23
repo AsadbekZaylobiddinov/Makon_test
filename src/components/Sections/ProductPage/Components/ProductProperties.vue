@@ -31,7 +31,7 @@ console.log(properties)
 }
 .producty__property__key__value{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family:cursive;
 }
 .producty__property__key{

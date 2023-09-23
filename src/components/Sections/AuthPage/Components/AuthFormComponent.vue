@@ -42,17 +42,27 @@ var emptyStatus = computed(() => authStore.getStatusCode == '' ? true : false)
 .auth__head__tx{
     color: #000;
 font-family: Inter;
-font-size: 32px;
+font-size: 2rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 .errorMessageText{
-    font-size: 24px;
+    text-align: center;
+    font-size: 1.5rem;
     color: red;
+    background-color: #fff;
+    padding: 3px;
+    margin-bottom: 5px;
 }
 .successMessageText{
-    font-size: 24px;
+    font-size: 1.5rem;
     color: rgb(81, 255, 0);
+}
+
+@media (max-width:600px){
+    .auth__head__tx{
+    color: white;
+    }
 }
 </style> 

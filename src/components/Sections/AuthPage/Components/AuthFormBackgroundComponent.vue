@@ -16,4 +16,11 @@
     justify-content: center;
     align-content: center;
   }
+
+  @media (max-width: 600px){
+    .auth__form__background__container{
+    width: 100vw;
+  background-color: #0074D9;
+  }
+  }
   </style>

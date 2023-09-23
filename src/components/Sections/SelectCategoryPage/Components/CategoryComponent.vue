@@ -27,6 +27,7 @@ function toCreateAdPage(){
     display: grid;
     justify-content: center;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .category__container{
     display: grid;
@@ -37,5 +38,16 @@ function toCreateAdPage(){
     height: 15vh;
     background-color: #0074D9;
     border-radius: 15px;
+}
+
+@media (max-width: 800px){
+    .category__container{
+        width: 30vw;
+    }
+}
+@media (max-width: 400px){
+    .category__container{
+        height: 10vh;
+    }
 }
 </style>

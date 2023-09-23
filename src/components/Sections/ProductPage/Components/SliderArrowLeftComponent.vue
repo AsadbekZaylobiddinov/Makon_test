@@ -16,8 +16,6 @@ var emit = defineEmits('turnLeftActiveElement')
 
 <style scoped>
 .slider__arrow__left__container{
-    margin-right: 30px;
-    /* justify-self: start; */
     align-self: center;
     cursor: pointer;
 }
@@ -30,5 +28,11 @@ var emit = defineEmits('turnLeftActiveElement')
 .slider__arrow__left__image{
     max-width: 32px;
     cursor: pointer;
+}
+
+@media (max-width:800px){
+    .slider__arrow__left__container{
+        justify-self: end;
+    }
 }
 </style>

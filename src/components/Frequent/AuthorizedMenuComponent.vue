@@ -8,20 +8,39 @@ import { ref } from 'vue'
 
 let right = ref(-20)
 
+var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+if(width < 901 && width > 499){
+    right.value = -40
+}
+else if(width < 501){
+    right.value = -60
+}
+
 function dropDown(){
-    if(right.value == -20){
+    if(right.value == -40 || right.value == -20 || right.value == -60){
 
         right.value = 0
 
     }
-    else{
-        right.value = -20
-    }
+//     else{
+//         if(width < 901 && width > 499){
+//     right.value = -40
+// }
+// else if(width < 501){
+//     right.value = -60
+// }
+//     }
     
 }
 
 function exitSidebar(){
-    right.value = -20
+    if(width < 901 && width > 499){
+    right.value = -40
+}
+else if(width < 501){
+    right.value = -60
+}
 }
 
 </script>
@@ -39,7 +58,7 @@ function exitSidebar(){
 
 <style scoped>
 .authorized__menu{
-    justify-self: center;
+    justify-self: end;
 }
 .authorized__menu__container{
     display: inline-grid;

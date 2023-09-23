@@ -75,17 +75,31 @@ function inputMaxPrice(e){
     display: inline;
 color: #726868;
 font-family: Inter;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normale;
 margin-left: 8px;
 }
 .filtr__price__inp{
-width: 5vw;
+width: 10vw;
 height: 25px;
 text-align: center;
 border-radius: 5px;
 border: 1px solid #DAD9D9;
+}
+
+@media (max-width: 780px){
+    .filtr__price__inp{
+        width: 15vw;
+height: 25px;
+}
+}
+
+@media (max-width: 600px){
+    .filtr__price__inp{
+        width: 25vw;
+height: 25px;
+}
 }
 </style>

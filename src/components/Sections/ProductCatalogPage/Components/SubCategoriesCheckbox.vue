@@ -2,13 +2,13 @@
 import {computed, ref} from 'vue'
 var props = defineProps(['subCategories', 'visibleOrNot', 'checkedSubCategory'])
 
-var visible = ref(false)
+let emit = defineEmits(['subcategoriesReady'])
 
 var subCategories = props.checkedSubCategory
 
-visible.value = computed(() => {
-  return props.visibleOrNot == 0 ? false : true
-})
+// visible.value = computed(() => {
+//   return props.visibleOrNot == 0 ? false : true
+// })
 
 function checkCheckbox(e){
 
@@ -40,38 +40,93 @@ else{
 </script>
 
 <template>
-    <div class="default" :class="{subCategoriesWrapper: !visible, activeSubCategoriesWrapper: visible}">
+    <div class="default" :class="{subCategoriesWrapper: !props.visibleOrNot, activeSubCategoriesWrapper: props.visibleOrNot}">
+      <div class="subCategoriesTitle">
+        <h1>Kategoriyalarni tanlang</h1>
+      </div>
+      <div class="subCategries">
         <div v-for="subCategory in props.subCategories" :key="subCategory.id" class="subCategoryCheckbox">
             <input :value="subCategory.name" @change="checkCheckbox" type="checkbox" v-model="subCategories[subCategory.id - 1]" :name="subCategory.name" :id="subCategory.name" class="subCheckbox">
             <label :for="subCategory.name">{{ subCategory.name }}</label>
+        </div>
+      </div>
+        <div class="readySubcategories">
+          <button @click="$emit('subcategoriesReady')">Tayyor</button>
         </div>
     </div>
 </template>
 
 <style scoped>
+
 .subCategoriesWrapper{
-  display: inline;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  display: none;
 }
-
+.subCategoriesTitle{
+  text-align: center;
+  margin-bottom: 40px;
+}
 .activeSubCategoriesWrapper{
-  display: inline;
-  max-height: max-content;
-  transition: max-height 0.3s ease-out;
+  display: grid;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
 }
-
+.subCategries{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+  width: 100vw;
+}
 .subCategoryCheckbox{
+display: grid;
+grid-template-areas: '1 2';
+grid-column-gap: 5px;
+background-color: #0074D9;
+justify-content: center;
+align-items: center;
 padding-top: 10px;
-text-align: center;
 padding-left: 10px;
-height: 30px;
-width: 15vw;
-border-radius: 5px;
+height: 50px;
+width: 20vw;
+color: white;
+border-radius: 15px;
 border: 1px solid #DAD9D9;
 }
+.subCategoryCheckbox label{
+  font-size: 1rem;
+}
 .subCheckbox{
-    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+.readySubcategories{
+  display: grid;
+  justify-content: center;
+  margin-top: 40px;
+}
+.readySubcategories button{
+  width: 20vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background-color: rgb(24, 182, 24);
+}
+
+@media (max-width: 600px){
+  .subCheckbox{
+width: 15px;
+height: 15px;
+  }
+  .readySubcategories button{
+    width: 30vw;
+  }
 }
 </style>

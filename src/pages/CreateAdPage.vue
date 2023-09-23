@@ -2,6 +2,7 @@
 import HeaderComponent from '../components/Frequent/HeaderComponent.vue';
 import FooterComponent from '../components/Frequent/FooterComponent.vue';
 import MainBlock from '../components/Sections/CreateAdPage/MainBlock.vue';
+import AuthorizedMenuMobile from '../components/Mobile/AuthorizedMenuMobile.vue';
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import MainBlock from '../components/Sections/CreateAdPage/MainBlock.vue';
         <section class="third__block">
             <footer-component></footer-component>
         </section>
+        <authorized-menu-mobile></authorized-menu-mobile>
     </main>
 </template>
 

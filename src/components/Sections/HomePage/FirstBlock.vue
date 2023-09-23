@@ -12,7 +12,7 @@ import AllCategoriesComponent from './Components/AllCategoriesComponent.vue';
             <header-component></header-component>
             <div class="wrapper">
                 <head-2-text></head-2-text>
-                <search-ad-component-first :bck-image="1" :width="'40vw'"></search-ad-component-first>
+                <search-ad-component-first :bck-image="1" :width="'60vw'"></search-ad-component-first>
                 <all-categories-component></all-categories-component>
             </div>
         </div>

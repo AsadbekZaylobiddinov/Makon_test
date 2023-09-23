@@ -5,7 +5,7 @@ import LogoBackgroundComponent from './Components/LogoBackgroundComponent.vue';
 
 <template>
 <section class="auth__section">
-        <logo-background-component></logo-background-component>
+        <logo-background-component class="logo__background"></logo-background-component>
         <auth-form-background-component></auth-form-background-component>
 </section>
   
@@ -15,5 +15,15 @@ import LogoBackgroundComponent from './Components/LogoBackgroundComponent.vue';
 .auth__section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width:600px){
+    .logo__background{
+        display: none;
+    }
+    .auth__section{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 }
 </style>

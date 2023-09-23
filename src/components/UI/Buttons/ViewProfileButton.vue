@@ -46,4 +46,11 @@ let name = sessionStorage.getItem('makon__user__name')
 .toggle__list{
     background-color: white;
 }
+
+@media (max-width: 600px){
+    .profile__image{
+        width: 30px;
+        height: 30px;
+    }
+}
 </style>

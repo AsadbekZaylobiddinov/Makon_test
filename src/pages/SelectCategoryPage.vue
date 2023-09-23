@@ -2,6 +2,7 @@
 import HeaderComponent from '../components/Frequent/HeaderComponent.vue';
 import CategoriesComponent from '../components/Sections/SelectCategoryPage/Components/CategoriesComponent.vue';
 import FooterComponent from '../components/Frequent/FooterComponent.vue';
+import AuthorizedMenuMobile from '../components/Mobile/AuthorizedMenuMobile.vue';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import FooterComponent from '../components/Frequent/FooterComponent.vue';
         </section>
         <section class="second__block">
             <categories-component></categories-component>
+            <authorized-menu-mobile></authorized-menu-mobile>
         </section>
         <section class="third__block">
             <footer-component></footer-component>

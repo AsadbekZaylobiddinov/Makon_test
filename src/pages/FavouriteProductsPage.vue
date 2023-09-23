@@ -2,6 +2,7 @@
 import FirstBlock from "../components/Sections/FavouriteProductsPage/FirstBlock.vue"
 import SecondBlock from "../components/Sections/FavouriteProductsPage/SecondBlock.vue"
 import ThirdBlock from "../components/Sections/HomePage/ThirdBlock.vue";
+import AuthorizedMenuMobile from "../components/Mobile/AuthorizedMenuMobile.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import ThirdBlock from "../components/Sections/HomePage/ThirdBlock.vue";
         <first-block class="first"></first-block>
         <second-block class="second"></second-block>
         <third-block class="third"></third-block>
+        <authorized-menu-mobile></authorized-menu-mobile>
     </main>
 </template>
 

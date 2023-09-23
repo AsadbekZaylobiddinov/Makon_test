@@ -4,6 +4,8 @@ import FirstBlock from '../components/Sections/ProductPage/FirstBlock.vue';
 import ThirdBlock from '../components/Sections/ProductPage/ThirdBlock.vue';
 import FourthBlock from '../components/Sections/ProductPage/FourthBlock.vue';
 import SixthBlock from '../components/Sections/ProductPage/SixthBlock.vue';
+import FixedCreateAdComponent from '../components/Frequent/FixedCreateAdComponent.vue';
+import AuthorizedMenuMobile from '../components/Mobile/AuthorizedMenuMobile.vue';
 import useProductStore from '../stores/product/product';
 import { getProductById } from '../services/product';
 import { useRoute } from 'vue-router';
@@ -49,6 +51,8 @@ onMounted( async () => {
         <third-block></third-block>
         <fourth-block></fourth-block>
         <sixth-block></sixth-block>
+        <fixed-create-ad-component></fixed-create-ad-component>
+        <authorized-menu-mobile></authorized-menu-mobile>
     </main>
 </template>
 

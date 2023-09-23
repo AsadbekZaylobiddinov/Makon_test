@@ -82,7 +82,8 @@ function chooseAreas(e){
         array[index] = false
     })
 
-    const selectedCity = e.target.value;
+    if(e.target.value != "O'zbekiston"){
+const selectedCity = e.target.value;
     const currentQuery = {...route.query}; // Создаем копию текущих query параметров
     currentQuery.City = selectedCity; // Добавляем новый query параметр
 
@@ -153,8 +154,20 @@ function chooseAreas(e){
     }
 
     isCityVisible.value = 1
+    }
+    else{
+        const currentQuery = {...route.query}; // Создаем копию текущих query параметров
+    currentQuery.City = ''; // Добавляем новый query параметр
+
+    // Обновляем query параметры с помощью router.push
+    router.push({ query: currentQuery });
+    }
+
 }
 
+function changeVisibleStatus(){
+    isCityVisible.value = 0
+}
 
 </script>
 
@@ -171,7 +184,7 @@ function chooseAreas(e){
             </div>
         </div>
         <div class="filtr__areas__wrapper filtr__element__wrapper">
-                <areas-component :checkedAreas="checkedAreas" :visibleOrNot=isCityVisible :areas = areas></areas-component>
+                <areas-component @areasReady="changeVisibleStatus" :checkedAreas="checkedAreas" :visibleOrNot=isCityVisible :areas = areas></areas-component>
         </div>
     </div>  
 </template>
@@ -209,7 +222,7 @@ function chooseAreas(e){
 .filtr__element__text{
 color: #726868;
 font-family: Inter;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normale;
@@ -218,9 +231,20 @@ margin-left: 8px;
 .filtr__element__input{
     display: inline;
     padding-left: 10px;
+    font-size: 1rem;
     height: 30px;
 width: 16vw;
 border-radius: 5px;
 border: 1px solid #DAD9D9;
+}
+
+@media(max-width: 780px){
+    .filtr__element__input{
+        width: 25vw;
+    }
+
+    .filtr__element__wrapper{
+        margin-top: 20px;
+    }
 }
 </style>
